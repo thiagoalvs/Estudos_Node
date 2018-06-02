@@ -15,6 +15,12 @@ app.use(function(req, res, next){
     next();
 });
 
+app.use(function(req, res, next){
+
+    console.log('Middleware 4');
+    next();
+});
+
 app.use('/api', routes);
 
 app.listen(3000, function () {
